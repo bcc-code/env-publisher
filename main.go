@@ -12,8 +12,6 @@ type Server struct {
 }
 
 func (s Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("Headers: %+v\n", r.Header)
-
 	// CORS headers
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET")
